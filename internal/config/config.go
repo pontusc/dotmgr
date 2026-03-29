@@ -9,14 +9,6 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
-// IsSymlink returns whether this entry uses symlink placement (default true).
-func (e Entry) IsSymlink() bool {
-	if e.Symlink == nil {
-		return true
-	}
-	return *e.Symlink
-}
-
 // Load reads and parses the config file from the default XDG location.
 func Load() (*Config, error) {
 	path, err := DefaultPath()
@@ -91,3 +83,10 @@ func DefaultPath() (string, error) {
 	return filepath.Join(dir, "dotmgr", "config.toml"), nil
 }
 
+// IsSymlink returns whether this entry uses symlink placement (default true).
+func (e Entry) IsSymlink() bool {
+	if e.Symlink == nil {
+		return true
+	}
+	return *e.Symlink
+}

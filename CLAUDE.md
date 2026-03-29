@@ -19,7 +19,7 @@ Agents (expert, scout, infra) should follow the same rule: provide explanations 
 
 - **CLI**: Cobra subcommands (`sync`, `diff`, `status`)
 - **Config**: TOML at `$XDG_CONFIG_HOME/dotmgr/config.toml` (defaults to `~/.config/dotmgr/config.toml`)
-- **Git**: go-git (pure Go, no external git binary required). SSH key auth for private repos.
+- **Git**: go-git (pure Go, no external git binary required). SSH URLs (`git@host:path.git`) for private repos, HTTPS for public repos.
 - **Placement**: Two strategies controlled by `symlink` bool (default `true`):
   - **Symlink** (default): clone repo to `$XDG_DATA_HOME/dotmgr/`, symlink targets to cache paths. Enables editing and pushing back to source.
   - **Direct copy** (`symlink = false`): fetch file content from remote, write to local path. Stateless.

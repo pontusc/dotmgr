@@ -11,8 +11,10 @@ type Config struct {
 // Repository defines a named git repository source.
 type Repository struct {
 	// URL is the git clone URL (SSH or HTTPS).
-	URL string `toml:"url"`
+	URL RepoURL `toml:"url"`
 }
+
+type RepoURL string
 
 // Entry represents a single managed dotfile or directory.
 type Entry struct {
