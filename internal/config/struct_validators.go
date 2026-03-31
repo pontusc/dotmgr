@@ -12,6 +12,10 @@ func (u *RepoURL) UnmarshalText(text []byte) error {
 	s := string(text)
 	var errs []error
 
+	if !strings.HasPrefix(s, "https://") && !strings.HasPrefix(s, "git@") {
+		return fmt.Errorf("invalid prefix, no 'git@' or 'https://' found")
+	}
+
 	// Validate SSH git URLs
 	if strings.HasPrefix(s, "git@") {
 		remainder := s[4:] // keep everything after 'git@'

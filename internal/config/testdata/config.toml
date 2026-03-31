@@ -1,11 +1,9 @@
-# Repository sources
 [repositories.dotfiles]
 url = "git@github.com:pontusc/.dotfiles.git"
 
 [repositories.private-infra]
 url = "git@github.com:pontusc/infra-configs.git"
 
-# Entries — direct copy (default strategy)
 [yamlfmt]
 path = "~/.config/yamlfmt/config"
 source = { repository = "dotfiles", path = "yamlfmt/config" }
