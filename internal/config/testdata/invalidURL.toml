@@ -1,6 +1,3 @@
-[repositories.private-infra]
-url = "git@github.com:pontusc/infra-configs.git"
-
-[entries.yamlfmt]
-path = "~/.config/yamlfmt/config"
-source = { repository = "dotfiles", path = "yamlfmt/config" }
+[repositories.dotfiles]
+# Malformed
+url = "gi@github.com:pontusc/.dotfiles.git"

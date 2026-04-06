@@ -50,3 +50,4 @@ func TestAllConfigs(t *testing.T) {
 		})
 	}
 }
+

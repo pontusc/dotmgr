@@ -31,5 +31,5 @@ source = { repository = "dotfiles", path = "hypr/" }
 # Entry from a separate private repo
 [entries.ssh-allowed-signers]
 path = "~/.ssh/allowed_signers"
-symlink = false
+disableSymlink = true
 source = { repository = "private-infra", path = "ssh/allowed_signers" }
