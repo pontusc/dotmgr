@@ -3,9 +3,9 @@ package config
 // Config represents the top-level configuration file.
 type Config struct {
 	// Repositories defines named git sources that entries can reference.
-	Repositories map[string]Repository
+	Repositories map[string]Repository `toml:"repositories"`
 	// Entries are the managed dotfiles/directories, keyed by name.
-	Entries map[string]Entry
+	Entries map[string]Entry `toml:"entries"`
 }
 
 // Repository defines a named git repository source.

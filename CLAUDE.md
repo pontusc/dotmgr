@@ -58,18 +58,18 @@ url = "git@github.com:pontusc/.dotfiles.git"
 [repositories.private-infra]
 url = "git@github.com:pontusc/infra-configs.git"
 
-# Entries are top-level keys. Symlink is default (true).
-[yamlfmt]
+# Entries are grouped under [entries]. Symlink is default (true).
+[entries.yamlfmt]
 path = "~/.config/yamlfmt/config"
 source = { repository = "dotfiles", path = "yamlfmt/config" }
 
 # With explicit git ref
-[starship]
+[entries.starship]
 path = "~/.config/starship.toml"
 source = { repository = "dotfiles", path = "starship/starship.toml", ref = "main" }
 
 # Opt out of symlink with symlink = false
-[ssh-allowed-signers]
+[entries.ssh-allowed-signers]
 path = "~/.ssh/allowed_signers"
 symlink = false
 source = { repository = "private-infra", path = "ssh/allowed_signers" }

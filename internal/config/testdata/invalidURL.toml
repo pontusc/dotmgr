@@ -1,6 +1,6 @@
 [repositories.private-infra]
 url = "git@github.com:pontusc/infra-configs.git"
 
-[yamlfmt]
+[entries.yamlfmt]
 path = "~/.config/yamlfmt/config"
 source = { repository = "dotfiles", path = "yamlfmt/config" }
