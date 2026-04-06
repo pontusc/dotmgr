@@ -22,9 +22,8 @@ type Entry struct {
 	Path string `toml:"path"`
 	// Source defines where to fetch this entry from.
 	Source Source `toml:"source"`
-	// Symlink controls the placement strategy. Defaults to true (symlink).
 	// Set to false for direct copy.
-	DisableSymlink bool `toml:"disableSymlink"`
+	DisableSymlink bool `toml:"disable_symlink"`
 }
 
 // Source references a named repository and a path within it.
