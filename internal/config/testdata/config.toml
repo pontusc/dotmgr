@@ -1,8 +1,8 @@
 [repositories.dotfiles]
 url = "git@github.com:pontusc/.dotfiles.git"
 
-[repositories.private-infra]
-url = "git@github.com:pontusc/infra-configs.git"
+[repositories.second-dotfiles]
+url = "git@github.com:pontusc/.dotfiles.git"
 
 [entries.yamlfmt]
 path = "~/.config/yamlfmt/config"
